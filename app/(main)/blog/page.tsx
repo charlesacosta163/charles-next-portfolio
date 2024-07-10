@@ -26,7 +26,7 @@ export default async function Page() {
           <Link href={`/blog`}  key={entry.sys.id} className="flex sm:flex-col-reverse sm:max-w-[400px] hover:-translate-y-1 transition-all sm:w-full gap-4 justify-between border-t-[1px] border-gray-400 p-4 cursor-pointer">
             <div className="flex flex-col justify-between gap-4 flex-1">
               <div>
-                <h1 className="font-bold text-[1.5rem]">{entry.fields.title}</h1>
+                <h1 className="font-bold text-[1.5rem]">{entry.fields.title as string}</h1>
                 <p className="line-clamp-2 text-gray-600 tracking-tight">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Sequi ex aperiam ipsum culpa numquam nesciunt delectus quae
@@ -37,13 +37,13 @@ export default async function Page() {
               </div>
 
               <div className="text-sm font-[500]">
-               By {entry.fields.author} on {formatDate(entry.sys.createdAt)}
+               By {entry.fields.author as string} on {formatDate(entry.sys.createdAt)}
               </div>
             </div>
 
             <div className="">
               <img
-                src={`https:${entry.fields.thumbnail.fields.file.url}`}
+                src={`https:${entry.fields.thumbnail as string}`}
                 alt=""
                 className="h-[150px] w-[200px] sm:w-full sm:h-auto rounded"
               />
