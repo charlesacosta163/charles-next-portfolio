@@ -6,7 +6,7 @@ const About = () => {
       <section>
         <h1 className="text-[3rem] tracking-tighter">About 👨‍💻</h1>
 
-        <p className="mt-4 leading-8">
+        <p className="mt-4 leading-8 sm:leading-9 sm:text-sm bg-white dark:bg-base2-dark p-8 sm:p-6 rounded-[20px] ">
           I am currently a third-year Computer Science student, with a strong foundation in JavaScript and extensive
           experience in full-stack development utilizing the MERN stack.
           Additionally, I have applied Next.js for larger-scale projects. My
@@ -30,7 +30,7 @@ const About = () => {
             return (
               <div
                 key={e.id}
-                className="flex items-center duration-200 bg-white hover:scale-105 gap-4 dark:bg-gradient-to-br dark:from-[#140f24] dark:to-black px-4 py-3 rounded"
+                className="flex items-center duration-200 bg-white hover:scale-105 gap-4 dark:bg-base2-dark px-4 py-3 rounded"
               >
                 <img src={e.link} alt="" className="w-[30px] h-[30px]" />
                 <span className="merriweather-light tracking-tight text-sm">

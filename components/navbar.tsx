@@ -29,14 +29,14 @@ const Navbar = () => {
           Charles Acosta
         </Link>
 
-        <div className="flex gap-0 items-center text-sm font-[500] sm:hidden">
+        <div className="flex gap-4 items-center text-sm sm:hidden">
           {navMenus.map((e) => (
             <Link
               key={e.id}
               href={e.path}
               className={`${
-                pathname.toString() === e.path && "bg-base1 text-white"
-              } px-4 py-2 rounded-full`}
+                pathname.toString() === e.path && "border-b-2 border-body-dark font-[700] dark:border-white"
+              } p-2`}
             >
               {e.name}
             </Link>

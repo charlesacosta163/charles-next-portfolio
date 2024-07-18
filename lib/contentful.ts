@@ -5,3 +5,4 @@ export const client = contentful.createClient({
   environment: process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT!, // defaults to 'master' if not set
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
 });
+

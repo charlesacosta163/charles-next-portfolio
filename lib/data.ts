@@ -5,16 +5,21 @@ import weatherPng from '@/public/weatherjungle.png'
 
 export const navMenus = [{
     id: 0,
+    icon: "🏡",
+    name: 'Home',
+    path: "/"
+}, {
+    id: 1,
     icon: "👨‍💻",
     name: 'About',
     path: "/about"
 }, {
-    id: 1,
+    id: 2,
     icon: "💻",
     name: 'Projects',
     path: "/projects"
 }, {
-    id: 2,
+    id: 3,
     icon: "📝",
     name: 'Blog',
     path: "/blog"

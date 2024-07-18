@@ -186,3 +186,21 @@
     font-style: italic;
   }
   
+  .markdown > * { all: revert; }
+
+  .markdown a {
+    color: #1e90ff; /* Adjust this color to your preference */
+    text-decoration: underline; /* Or whatever style you prefer */
+  }
+
+  .markdown > h2 {
+    font-weight: 600;
+  }
+  
+  .markdown > blockquote {
+    border-left: 3px solid rgb(125, 125, 125);
+    padding-left: 2rem;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    color: gray;
+  }

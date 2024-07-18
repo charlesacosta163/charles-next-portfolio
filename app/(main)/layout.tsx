@@ -10,7 +10,7 @@ export default function RootLayout({
     <div className="flex flex-col min-h-screen items-center p-4 gap-4">
         <Navbar />
 
-        <main className="flex-1 max-w-[1000px] w-full">
+        <main className="flex-1 max-w-[1000px] w-full flex justify-center items-start">
             {children}
         </main>
 
