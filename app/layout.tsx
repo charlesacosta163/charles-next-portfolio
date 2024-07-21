@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://charlesac.dev",
     siteName: "Charles Acosta",
     images: [{
-      url: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?q=80&w=2025&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "/public/charlesog.png",
       width: 800,
       height: 600
     }, {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Charles Acosta",
     description: "Hi, I'm Charles Acosta! Check out my web development projects and blog posts, and learn about my journey in tech.",
     images: [{
-      url: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?q=80&w=2025&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "/public/charlesog.png",
       width: 800,
       height: 600
     }, {
