@@ -2,6 +2,49 @@ import { client } from "@/lib/contentful";
 import MarkedComponent from "@/components/marked";
 import Image from "next/image";
 import { formatDate } from "@/lib/utils";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = params;
+  const article = (await client.getEntry(slug)) as any;
+
+  const title = article.fields.title as string;
+  const fullDescription = article.fields.content as string;
+  const imageUrl = article.fields.thumbnail?.fields.file.url as string;
+
+  const description = fullDescription.length > 160 ? fullDescription.slice(0, 160) + "..." : fullDescription;
+
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'article',
+      title,
+      description,
+      url: `https://charlesac.dev/blog/${slug}`,
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
