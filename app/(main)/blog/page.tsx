@@ -3,6 +3,45 @@ import Image from "next/image";
 
 import { client } from "@/lib/contentful";
 import { formatDate } from "@/lib/utils";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Charles Acosta's Blog";
+  const description = "Explore Charles Acosta's latest blog posts on web development, technology, and more.";
+  const url = "https://charlesac.dev/blog";
+  const imageUrl = "https://images.pexels.com/photos/2312369/pexels-photo-2312369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: "website", 
+      title,
+      description,
+      url,
+      siteName: "Charles Acosta",
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  };
+}
 
 export default async function Page() {
   const entries = await client.getEntries({
