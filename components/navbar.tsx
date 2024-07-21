@@ -52,7 +52,7 @@ const Navbar = () => {
             <SheetContent className="bg-body-light dark:bg-body-dark dark:text-body-light">
               <SheetHeader>
                 <SheetTitle className="text-[1.5rem]">Links</SheetTitle>
-                <SheetDescription className="flex flex-col gap-2">
+                <SheetDescription className="flex flex-col gap-2" asChild>
                   {navMenus.map((e) => {
                     return (
                       <SheetClose key={e.id} asChild>

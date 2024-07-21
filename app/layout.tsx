@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Head from "next/head";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   keywords: ["Next.js", "TypeScript", "Web Development", "College", "University", "Programming"],
   referrer: 'origin-when-cross-origin',
   creator: "Charles Acosta",
+  category: "Technology",
   openGraph: {
     type: 'website',
     title: "Charles Acosta",
@@ -39,7 +41,20 @@ export const metadata: Metadata = {
       width: 800,
       height: 600
     }]
-  }
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +66,22 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="../app/favicon.ico" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-R4RFKYSS36"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R4RFKYSS36');
+            `,
+          }}
+        />
       </Head>
       <body className={`bg-body-light text-text-light dark:bg-body-dark dark:text-text-dark poppins-regular `}>{children}</body>
     </html>
