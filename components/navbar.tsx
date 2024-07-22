@@ -69,7 +69,6 @@ const Navbar = () => {
                         </SheetClose>
                       );
                     })}
-                    <SheetClose>
                       <button className="bg-yellow-400 text-black tracking-tighter w-full font-bold px-4 py-2 sm:py-2 sm:px-2 rounded-full text-sm shadow mt-2">
                         <a
                           href="https://www.buymeacoffee.com/charlesacosta163"
@@ -81,7 +80,6 @@ const Navbar = () => {
                           <span>Buy me a coffee</span>
                         </a>
                       </button>{" "}
-                    </SheetClose>
                   </div>
                 </SheetDescription>
               </SheetHeader>
