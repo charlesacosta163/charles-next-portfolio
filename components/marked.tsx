@@ -9,7 +9,7 @@ const MarkedComponent = ({ source }: { source: string }) => {
       children={source}
       remarkPlugins={[remarkGfm, remarkBreaks]}
       rehypePlugins={[rehypeRaw]}
-      className="markdown leading-6 sm:[&>blockquote]:p-4 sm:[&>blockquote]:text-xs sm:[&>blockquote]:leading-6
+      className="markdown leading-7 sm:[&>blockquote]:p-4 sm:[&>blockquote]:text-xs sm:[&>blockquote]:leading-6
         [&>blockquote]:bg-gradient-to-br
         [&>blockquote]:from-[#7F9FFF]
         [&>blockquote]:to-[#324AB2]"
