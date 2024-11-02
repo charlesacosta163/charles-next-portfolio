@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className="flex justify-between w-full bg-transparent rounded py-4 sm:py-2">
         <Link
           href="/"
-          className="text-[#6e6b90] text-2xl tracking-[-0.075em] font-[700]"
+          className="text-[#6e6b90] text-2xl tracking-tighter font-extrabold"
         >
           Charles Acosta
         </Link>
